@@ -15,8 +15,8 @@ const translations = {
     contacts: 'Contatos',
     // HOMEPAGE SECTION
     profession: 'Estudante de Engenharia de Software',
-    subtitle: 'Desenvolvendo sistemas backend de alta performance',
-    description: 'Focado em Python e Java, buscando dominar o que há por trás de sistemas sólidos e desenvolvendo arquiteturas de alta performance.',
+    subtitle: 'Estudando desenvolvimento back-end',
+    description: 'Em constante aprendizado, praticando JavaScript e evoluindo no desenvolvimento back-end.',
     // SKILLS SECTION
     skillsDescription: 'Um conjunto de tecnologias que impulsionam o desenvolvimento backend com eficiência e escala.',
     // PROJECTS SECTION
@@ -46,8 +46,8 @@ const translations = {
     contacts: 'Contacts',
     // HOMEPAGE SECTION
     profession: 'Software Engineering Student',
-    subtitle: 'Developing high-performance backend systems.',
-    description: 'Focused on Python and Java, seeking to master the inner workings of robust systems and developing high-performance architectures.',
+    subtitle: 'Studying back-end development',
+    description: 'In constant learning, practicing JavaScript and evolving in back-end development.',
     // SKILLS SECTION
     skillsDescription: 'A set of technologies that drive backend development with efficiency and scale.',
     // PROJECTS SECTION
@@ -197,4 +197,5 @@ if (savedLang === 'pt-BR') {
 } else if (savedLang === 'en-US') {
   console.log("%cYou found the easter egg! 😏", "color:#5280d6; font-size:16px; font-weight:bold;");
   console.log("Since you're here... let's code together!");
+
 }
