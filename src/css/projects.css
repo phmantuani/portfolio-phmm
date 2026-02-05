@@ -1,0 +1,216 @@
+.projects_section {
+    background-color: var(--projects-page);
+}
+
+.projects-content {
+    margin-bottom: 40px;
+}
+
+.projects-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects-title h2 {
+    font-size: 38px;
+    color: var(--text-primary);
+}
+
+.projects-title p {
+    font-size: 18px;
+    color: var(--text-primary);
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+    row-gap: 40px;
+    column-gap: 2%;
+    width: 100%;
+    margin-top: 5%;
+}
+
+.projects-item {
+    background-color: var(--projects-box);
+    width: 280px;
+    height: 480px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    border: solid rgba(0, 0, 0, 0.097) 1px;
+}
+
+.projects-item:hover {
+    transform: translateY(-10px);
+}
+
+.project-thumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-thumb::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--projects-fade);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.project-thumb:hover::after {
+  opacity: 1;
+}
+
+.project-thumb img {
+    width: 280px;
+    height: 160px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.project-description {
+    padding-left: 5%;
+    color: var(--text-primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;    
+    height: 62%;
+}
+
+.project-description h2 {
+    padding-top: 10%;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.project-description p {
+    padding-top: 4%;
+    padding-right: 2%;
+    font-size: 14px;
+}
+
+.description-languages {
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    justify-content: start;
+    width: auto;
+    margin-top: auto;
+    gap: 3%;
+    row-gap: 10px;
+}
+
+.description-languages p {
+    width: auto;
+    height: 25px;;
+    padding: 8px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    background-color: var(--projects-languages);
+    font-size: 10px;
+    color: var(--text-primary);
+}
+
+
+/* ########################################################################################################### */
+/* PROJECTS RESPONSIVO */
+/* ########################################################################################################### */
+
+@media screen and (max-width: 950px) {
+    .projects-container {
+        grid-template-columns: repeat(2, auto);
+        place-items: center;
+        padding-right: 3%;
+        padding-left: 1%;
+        column-gap: 0;
+    }
+    .projects-item {
+        width: 90%;
+        min-width: 400px;
+        height: 460px;
+    }
+    .project-thumb img {
+        width: 100%;
+    }
+    .project-description {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    .projects-item {
+        min-width: 350px;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .projects-container {
+        grid-template-columns: repeat(1, auto);
+    }
+    .project-description h2 {
+        padding-top: 5%;
+    }
+    .projects-item {
+        height: 440px;
+    }
+    .description-languages {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: auto;
+        padding-bottom: 2%;
+    }
+}
+
+@media screen and (max-width: 605px) {
+    .projects-title h2 {
+        font-size: 34px;
+    }
+    .projects-title p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 485px) {
+    .projects-item {
+        height: 450px;
+    }
+    .projects-title p {
+        font-size: 14px;
+        text-align: center;
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .projects-item {
+        height: 480px;
+        min-width: unset;
+        width: 90%;
+    }
+    .projects-title h2 {
+        font-size: 28px;
+        font-weight: 600;
+        margin-bottom: 2%;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .projects-item {
+        height: 500px;
+    }
+    .projects-title h2 {
+        font-size: 26px;
+    }
+    .projects-title p {
+        font-size: 13px;
+    }
+}

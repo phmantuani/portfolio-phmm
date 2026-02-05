@@ -1,0 +1,217 @@
+.home_page {
+    background-color: var(--home-page);
+    font-family: "Poppins", sans-serif;
+}
+
+.home-page {
+    padding-top: 5%;
+    padding-left: 15%;
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    flex-wrap: wrap;
+    padding-bottom: 5%;
+}
+
+.home-content {
+    width: 80%;
+        flex: 1; /* texto ocupa o espaço restante */
+}
+
+/* GIF */
+
+#coding {
+  max-width: 350px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(90px);
+}
+
+
+/* PROFESSION-TITLE */
+
+.profession-title {
+    background-color: var(--title-homepage);
+    width: fit-content;
+    padding: 0 15px;
+    height: 40px;
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: ease 0.3s;
+}
+
+.profession-title:hover {
+    box-shadow: 0 0 15px rgba(82, 128, 214, 0.7);
+}
+
+.profession-title h2 {
+    color: #4579d8;
+    font-size: 14px;
+}
+
+/* ABOUT-ME-TITLE */
+
+.home-page h1 {
+    font-size: 68px;
+    color: var(--text-primary);
+    padding-top: 3%;
+    font-weight: 500;
+}
+
+.home-page h3 {
+    font-size: 24px;
+    color: var(--text-primary);
+    padding-top: 1%;
+    font-weight: 500;
+}
+
+.home-page p {
+    font-size: 18px;
+    color: var(--text-primary2);
+    padding-top: 2%;
+    font-weight: 300;
+}
+
+/* BUTTON */
+
+.home-cta {
+    display: flex;
+    gap: 3%;
+    margin-top: 6%;
+}
+
+.btn-home {
+    width: 150px;
+    height: 40px;
+    background-color: var(--btn-color);
+    box-shadow: 0 0 10px rgba(82, 128, 214, 0.7);
+    border-radius: 10px;
+    display: inline-flex;
+    text-decoration: none;
+    color: var(--text-primary);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to right, var(--teste), var(--btn-color));
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: background-position 0.6s;
+}
+
+.btn-home:hover {
+    background-position: left bottom;
+}
+
+.btn-home svg {
+    margin-left: 10px;
+    color: var(--icon-color);
+    transition: margin-left 0.3s ease;
+}
+
+.btn-home:hover svg {
+    margin-left: 15px;
+}
+
+.mail-home {
+    width: 18px;
+    height: 18px;
+    color: var(--icon-color);
+}
+
+.link-home {
+    width: 18px;
+    height: 18px;
+    color: var(--icon-color);
+}
+
+.btn-home:hover .link-home {
+    transform: rotate(45deg);
+    transition: transform 0.5s ease;
+}
+
+/* ########################################################################################################### */
+/* HOMEPAGE RESPONSIVO */
+/* ########################################################################################################### */
+
+@media screen and (max-width: 1100px) {
+    .home-page h1 {
+        font-size: 68px;
+        line-height: 1;
+        padding-top: 8%;
+    }
+    .home-page h3 {
+        padding-top: 3%;
+    }
+    .home-page p {
+        padding-top: 3%;
+    }
+    .home-page {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .profession-title h2 {
+        font-size: 12px;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+    .home_page {
+        display: flex;
+        align-items: left;
+        justify-content: left;
+    }
+    .home-page {
+        padding-left: 10%;
+        width: 85%;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .home-cta {
+        gap: 5%;
+    }
+    .home-page {
+        width: 90%;
+    }
+    .home-page h1 {
+        font-size: 62px;
+    }
+    .home-page h3 {
+        font-size: 22px;
+    }
+    .home-page p {
+        font-size: 16px;
+    }
+    #coding {
+        margin-left: -18%;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    #coding {
+        width: 300px;
+        height: 300px;
+        margin-left: -20%;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    #coding {
+        margin-left: -25%;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    #coding {
+        margin-left: -30%;
+    }
+}

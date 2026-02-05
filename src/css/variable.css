@@ -1,0 +1,71 @@
+/* ########################################################################################################### */
+/* COLORS */
+/* ########################################################################################################### */
+
+/* LIGHTMODE */
+
+:root{
+  /*HEADER*/
+  --nav-bar: #ffffff;
+  --text-color: #373737;
+  --text-hover: #000000;
+  --icon-color: #000000;
+  --icon-hover: #e4e7ed;
+  --language-border: #00000057;
+  --responsive-nav-bar: #ffffffb9;
+  /*SECTIONS*/
+  --text-primary: #000000;
+  --text-primary2: #787A74;
+  --text-primary3: #ffffff;
+  --btn-color: #e4e7ed;
+  --home-page: #ffffff;
+  --skills-page: #ffffff;
+  --skills-box: #d5d9e1;
+  --projects-page: #ffffff;
+  --projects-box: #ffffff;
+  --projects-languages: #e8eaee;
+  --projects-fade: linear-gradient(to top, rgba(255, 255, 255, 0.4), transparent);
+  --contacts-page: #ffffff;
+  --contact-box: #e4e7ed;
+  --contact-border: #000000;
+  --contact-icons: #d5d9e1;
+  --contact-icons2: #393737;
+  --footer: #ffffff;
+  --title-homepage: #e4e7ed;
+  --shadow-skills: #00000033;
+  --scrollbar: #eee6e6;
+}
+
+/* DARKMODE */
+
+.darkmode{
+  /*HEADER*/
+  --nav-bar: #0F1319;
+  --text-color: #cfcfcf;
+  --text-hover: #ffffff;
+  --icon-color: #ffffff;
+  --icon-hover: #344E7A;
+  --language-border: #ffffff;
+  --responsive-nav-bar: #0f1319b9;
+  --title-homepage: #25375A;
+  /*SECTIONS*/
+  --text-primary: #ffffff;
+  --text-primary2: #A9ABA5;
+  --text-primary3: #ffffff;
+  --btn-color: #000000;
+  --home-page: #0F1319; 
+  --skills-page: #11151C; 
+  --skills-box: #0f2550df; 
+  --projects-page: #0F1319; 
+  --projects-box: #0B0D12; 
+  --projects-languages: #1D2330;    
+  --projects-fade: linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent);
+  --contacts-page: #11151C; 
+  --contact-box: #0A0D11; 
+  --contact-border: #ffffffdf; 
+  --contact-icons: #2c394f;  
+  --contact-icons2: #ffffff;  
+  --footer: #0F1319;
+  --shadow-skills: #3a68bd23;
+  --scrollbar: #0F1319;
+}

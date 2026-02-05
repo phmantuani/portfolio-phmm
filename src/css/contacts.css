@@ -1,0 +1,195 @@
+.contacts_section {
+    padding: 0;
+    background-color: var(--contacts-page);
+}
+
+.contacts-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 8%;
+}
+
+.contacts-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contacts-title h2 {
+    font-size: 48px;
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.contacts-title p {
+    font-size: 16px;
+    color: var(--text-primary);
+    font-weight: 500;
+    padding-bottom: 8%;
+}
+
+.contact-box {
+    background-color: var(--contact-box);
+    width: 65%;
+    border-radius: 20px;
+    border: solid var(--contact-border) 1px;
+    padding: 2%;
+}
+
+.icons-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.icons-box > div {
+    display: flex;
+    align-items: center;
+    gap: 12px; 
+}
+
+.icons-box p {
+    color: var(--text-primary2);
+    font-size: 14px;
+    font-weight: 400;
+}
+.icons-box a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 14px;
+    transition: ease-in-out 0.2s;
+    font-weight: 400;
+}
+
+.icons-box a:hover {
+    color: #5281E0;
+}
+
+.contact-box h3 {
+    font-size: 24px;
+    color: var(--text-primary);
+    padding-bottom: 2%;
+    font-weight: 500;
+}
+
+.icons-box svg {
+    width: 26px;
+    height: 26px;
+    fill: var(--contact-icons2);
+}
+
+.icon-circle {
+    background-color: var(--contact-icons);
+    box-shadow: inset 0 0 10px var(--shadow-skills);
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.linkedin {
+    padding-top: 5%;
+}
+
+.whatsapp {
+    padding-top: 5%;
+}
+
+.contacts-cv {
+    background-color: var(--contact-icons);
+    box-shadow: inset 0 0 10px var(--shadow-skills);
+    width: 160px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3%;
+}
+
+.contacts-cv a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: var(--text-primary);
+    gap: 8px;
+}
+
+.contacts-cv:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 5px 2px rgba(82, 128, 214, 0.7);
+}
+
+
+/* ########################################################################################################### */
+/* CONTACTS RESPONSIVO */
+/* ########################################################################################################### */
+
+@media screen and (max-width: 950px) {
+    .contact-box {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .icons-box {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .contact-box {
+        padding-left: 3%;
+    }
+    .github {
+        padding-top: 5%;
+    }
+    .email {
+        padding-top: 2%;
+    }
+    .contacts-cv {
+        margin-top: 5%;
+        margin-bottom: 2%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .contacts-title h2 {
+        font-size: 44px;
+    }
+    .contacts-title p {
+        font-size: 16px;
+        width: 65%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .contact-box {
+        width: 90%;
+        padding-left: 4%;
+    }
+    .contacts-title h2 {
+        font-size: 38px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .contacts-title p {
+        width: 70%;
+        font-size: 14px;
+    }
+    .contacts-title h2 {
+        font-size: 36px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .contacts-title h2 {
+        font-size: 34px;
+    }
+}

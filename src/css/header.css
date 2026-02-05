@@ -1,0 +1,330 @@
+/* ########################################################################################################### */
+/* DARKMODE/LIGHTMODE */
+/* ########################################################################################################### */
+
+
+#theme-switch{
+  height: 35px;
+  width: 35px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: transparent;
+  border: none;
+}
+
+/* ############################### ICONES HEADER (Globo e Tema) ################################################ */
+
+.language_navbar svg,
+#theme-switch svg{
+  fill: var(--icon-color);
+  display: block;
+  width: 22px;
+  height: 22px;
+}
+
+#theme-switch svg:last-child{
+  display: none;
+}
+
+.darkmode #theme-switch svg:first-child{
+  display: none;
+}
+.darkmode #theme-switch svg:last-child{
+  display: block;
+}
+
+
+/* ########################################################################################################### */
+/* HEADER */
+/* ########################################################################################################### */
+
+
+
+header {
+    padding: 0px 4%;
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    background-color: var(--nav-bar);
+    z-index: 999;
+}
+
+.header_interface {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a {
+  color: var(--text-color);
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 3px;
+  transition: color 0.3s ease;
+}
+
+.menu-desktop a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: #5281E0;
+  transition: width 0.3s ease;
+}
+
+.menu-desktop a:hover {
+  color: var(--text-hover);
+}
+
+.menu-desktop a:hover::after {
+  width: 100%;
+}
+
+.menu-desktop a.active {
+  color: var(--text-hover);
+}
+
+.menu-desktop a.active::after {
+  width: 100%;
+}
+
+.logo img {
+  height: 50px;
+  padding-left: 5%;
+  width: auto;
+  display: block;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding-right: 10%;
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: inline-block;
+    padding: 0 30px;
+}
+
+
+/* ############################### ICONES HEADER (Globo e Tema) ################################################ */
+
+.icons_header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.icons_header button {
+  width: 35px;
+  height: 35px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.icons_header button:hover,
+#theme-switch:hover {
+    background-color: var(--icon-hover); 
+}
+
+/* ##################################### LINGUAGEM HEADER ###################################################### */
+
+.language-menu {
+    display: none; 
+    position: absolute;
+    top: 90%; 
+    right: 20%; 
+    background-color: var(--nav-bar);
+    border: 1px solid var(--language-border);
+    box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.265);
+    border-radius: 3px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    min-width: 170px;
+    max-height: 80px;
+    z-index: 1000;
+}
+
+.language-menu li {
+    padding-left: 5px;
+    line-height: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    color: var(--text-color);
+}
+
+.language-menu li:hover {
+    background-color: var(--icon-hover);
+    color: var(--text-hover);
+}
+
+
+/* ########################################################################################################### */
+/* HEADER RESPONSIVO */
+/* ########################################################################################################### */
+
+
+.menu-mobile-icon {
+  display: none;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+@media screen and (max-width: 1100px) {
+  .logo {
+    padding-left: 1px;
+}
+}
+
+@media screen and (max-width: 930px) {
+  header {
+    height: 90px;
+  }
+  .navbar {
+    padding: 0;
+  }
+  header nav ul li {
+    padding: 0 20px;
+  }
+  .language-menu {
+    right: 15%; 
+  }
+}
+
+@media screen and (max-width: 680px) {
+  header {
+    height: 90px;
+    line-height: 85px;
+  }
+  .navbar {
+    padding: 1.5rem 4rem;
+    gap: 5px;
+  }
+  .nav-item {
+    display: none;
+  }
+  .menu-mobile-icon {
+    display: block;
+  }
+  .menu-mobile-icon button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;   
+    align-items: center;  
+    justify-content: center; 
+    height: 85px;          
+  }
+  .icons_header {
+    padding-left: 100px;
+    justify-content: flex-end;
+    gap: 20px;
+  }
+  
+  .icon-mobile {
+    fill: var(--icon-color);
+  }
+  .icon-close {
+    display: none;
+  }
+  #menu-toggle.open .icon-open {
+    display: none;
+  }
+  #menu-toggle.open .icon-close {
+    display: block;
+  }
+  .mobile-menu {
+    position: fixed;
+    top: 70px; 
+    left: 0;
+    width: 100%;
+    max-height: 50vh; 
+    background-color: var(--responsive-nav-bar);
+    display: none;  
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 1rem;
+    z-index: 999;
+  }
+  .mobile-menu ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+  .mobile-menu .nav-item {
+    display: block;
+    text-align: left;
+    padding-left: 1rem;
+    color: var(--text-color);
+  }
+  .mobile-menu .nav-item a {
+    color: var(--icon-color);
+    font-size: 20px;
+  }
+  .open {
+    display: block;
+  }
+  .mobile-menu .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: #5281E0;
+    transition: width 0.3s ease;
+  }
+  .mobile-menu .nav-link.active::after {
+    width: 100%;
+  }
+  .language_navbar svg,
+  #theme-switch svg {
+    width: 25px;
+    height: 25px;
+  }
+  .logo img {
+    width: 100px;
+    font-size: 10px;
+  }
+  .language-menu {
+    right: 40%; 
+  }
+} 
+
+@media screen and (max-width: 450px) {
+  .navbar {
+    padding: 0;
+    margin-left: 5px;
+  }
+  .icons_header {
+    gap: 15px; 
+  }
+  .menu-mobile-icon {
+    margin-left: 5px;
+  }
+}
